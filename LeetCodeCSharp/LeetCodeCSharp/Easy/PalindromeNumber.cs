@@ -31,30 +31,16 @@
         /// <returns>True if number is a palindrome</returns>
         public static bool PalindromeNumberSolution(int number)
         {
-            var digits = new List<int>();
+            var x = number;
+            var y = 0;
 
-            if (number < 0)
+            while (x > 0)
             {
-                return false;
+                y = (y * 10) + (x % 10);
+                x /= 10;
             }
 
-            while (number > 0)
-            {
-                digits.Add(number % 10);
-                number /= 10;
-            }
-
-            for (var x = 0; x < digits.Count; x++)
-            {
-                var counterpart = digits.Count - x - 1;
-
-                if (digits[x] != digits[counterpart])
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return y == number;
         }
     }
 }
