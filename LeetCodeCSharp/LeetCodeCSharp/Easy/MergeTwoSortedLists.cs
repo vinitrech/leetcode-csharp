@@ -42,46 +42,19 @@
         /// <returns></returns>
         public static ListNode MergeTwoSortedListsSolution(ListNode list1, ListNode list2)
         {
-            var currentNode = list1;
-            var currentNode2 = list2;
+            if (list1 is null) { return list2; }
+            if (list2 is null) { return list1; }
 
-            if (list1 is null && list2 is not null)
+            if (list1.Val <= list2.Val)
             {
-                return list2;
-            }
-            else if (list2 is null && list1 is not null)
-            {
+                list1.Next = MergeTwoSortedListsSolution(list1.Next!, list2);
                 return list1;
             }
-
-            while (currentNode is not null)
+            else
             {
-                if (currentNode.Val <= currentNode2!.Val)
-                {
-                    var aux = currentNode.Next;
-                    var aux2 = currentNode2!.Next;
-
-                    currentNode.Next = currentNode2;
-                    currentNode2.Next = aux;
-
-                    currentNode = aux;
-                    currentNode2 = aux2;
-                }
-                else
-                {
-                    //Not working for [2] [1] -> FIX
-                    var aux = currentNode.Next;
-                    var aux2 = currentNode2!.Next;
-
-                    currentNode2.Next = currentNode;
-                    currentNode.Next = aux2;
-
-                    currentNode = aux;
-                    currentNode2 = aux2;
-                }
+                list2.Next = MergeTwoSortedListsSolution(list1, list2.Next!);
+                return list2;
             }
-
-            return list1;
         }
     }
 }

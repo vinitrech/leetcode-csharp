@@ -75,6 +75,23 @@ namespace SolutionsValidator.Easy
                 {
                     Val = 0
                 }
+            },
+             new object[] {
+                new ListNode
+                {
+                    Val = 2,
+                    Next = null
+                },
+                new ListNode
+                {
+                    Val = 1,
+                    Next = null
+                },
+                new ListNode
+                {
+                    Val = 1,
+                    Next = null
+                }
             }
         };
 
@@ -91,12 +108,7 @@ namespace SolutionsValidator.Easy
             var currentExpectedResultValue = expectedResult;
 
             //Assert
-            while (currentValue is not null)
-            {
-                currentValue.Val.Should().Be(currentExpectedResultValue?.Val ?? 0);
-                currentValue = currentValue.Next;
-                currentExpectedResultValue = currentExpectedResultValue?.Next;
-            }
+            currentValue?.Val.Should().Be(currentExpectedResultValue?.Val);
         }
     }
 }
