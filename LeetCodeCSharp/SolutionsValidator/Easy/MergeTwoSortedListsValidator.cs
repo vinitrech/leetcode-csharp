@@ -103,7 +103,7 @@ namespace SolutionsValidator.Easy
             AssertionOptions.FormattingOptions.MaxDepth = 100;
 
             //Act
-            var result = MergeTwoSortedLists.MergeTwoSortedListsSolution(list1, list2);
+            var result = MergeTwoSortedLists.SolveMergeTwoSortedLists(list1, list2);
             var currentValue = result;
             var currentExpectedResultValue = expectedResult;
 

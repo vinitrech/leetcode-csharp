@@ -40,19 +40,19 @@
         /// <param name="list1"></param>
         /// <param name="list2"></param>
         /// <returns></returns>
-        public static ListNode MergeTwoSortedListsSolution(ListNode list1, ListNode list2)
+        public static ListNode SolveMergeTwoSortedLists(ListNode list1, ListNode list2)
         {
             if (list1 is null) { return list2; }
             if (list2 is null) { return list1; }
 
             if (list1.Val <= list2.Val)
             {
-                list1.Next = MergeTwoSortedListsSolution(list1.Next!, list2);
+                list1.Next = SolveMergeTwoSortedLists(list1.Next!, list2);
                 return list1;
             }
             else
             {
-                list2.Next = MergeTwoSortedListsSolution(list1, list2.Next!);
+                list2.Next = SolveMergeTwoSortedLists(list1, list2.Next!);
                 return list2;
             }
         }

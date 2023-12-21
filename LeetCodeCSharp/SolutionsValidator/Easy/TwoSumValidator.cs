@@ -13,7 +13,7 @@ namespace SolutionsValidator.Easy
         public void OnSuccess_Should_Find_Correct_Answer_For_TwoSum(int[] input, int target, int[] solution)
         {
             //Arrange+Act
-            var result = TwoSum.TwoSumSolution(input, target);
+            var result = TwoSum.SolveTwoSum(input, target);
 
             //Assert
             result.Should().HaveCount(solution.Length);

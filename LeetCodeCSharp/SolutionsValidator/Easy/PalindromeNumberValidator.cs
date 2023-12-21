@@ -13,7 +13,7 @@ namespace SolutionsValidator.Easy
         public void OnSuccess_Should_Find_Correct_Answer_For_PalindromeNumber(int input, bool result)
         {
             //Arrange+Act
-            var isPalindrome = PalindromeNumber.PalindromeNumberSolution(input);
+            var isPalindrome = PalindromeNumber.SolvePalindromeNumber(input);
 
             //Assert
             isPalindrome.Should().Be(result);

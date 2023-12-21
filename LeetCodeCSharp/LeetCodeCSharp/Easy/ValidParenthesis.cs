@@ -26,7 +26,7 @@
         /// </summary>
         /// <param name="s"></param>
         /// <returns>True if the string is valid</returns>
-        public static bool ValidParenthesisSolution(string s)
+        public static bool SolveValidParenthesis(string s)
         {
             var stack = new Stack<char>();
             var openingTags = new List<char> { '(', '{', '[' };

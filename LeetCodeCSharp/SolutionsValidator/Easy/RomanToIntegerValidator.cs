@@ -13,7 +13,7 @@ namespace SolutionsValidator.Easy
         public void OnSuccess_Should_Find_Correct_Answer_For_RomanToInteger(string romanNumber, int expectedInteger)
         {
             //Arrange+Act
-            var result = RomanToInteger.RomanToIntegerSolution(romanNumber);
+            var result = RomanToInteger.SolveRomanToInteger(romanNumber);
 
             //Assert
             result.Should().Be(expectedInteger);

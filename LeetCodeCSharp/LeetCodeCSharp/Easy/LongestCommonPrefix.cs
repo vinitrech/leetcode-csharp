@@ -23,7 +23,7 @@ namespace LeetCodeCSharp.Easy
         /// </summary>
         /// <param name="strs">strings to search</param>
         /// <returns>The longest common prefix or an empty string</returns>
-        public static string LongestCommonPrefixSolution(string[] strs)
+        public static string SolveLongestCommonPrefix(string[] strs)
         {
             var prefix = new StringBuilder();
             var index = 0;

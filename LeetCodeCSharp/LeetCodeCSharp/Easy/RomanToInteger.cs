@@ -51,7 +51,7 @@
         /// </summary>
         /// <param name="s">roman number in string format</param>
         /// <returns>The integer representation of the roman number</returns>
-        public static int RomanToIntegerSolution(string s)
+        public static int SolveRomanToInteger(string s)
         {
             var result = 0;
             Dictionary<char, int> romanIntValue = new()

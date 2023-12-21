@@ -34,7 +34,7 @@
         /// <param name="nums">Array of integers to search</param>
         /// <param name="target">Expected sum result</param>
         /// <returns>An array containing the indexes of the numbers that result in the expected sum</returns>
-        public static int[] TwoSumSolution(int[] nums, int target)
+        public static int[] SolveTwoSum(int[] nums, int target)
         {
             var checkedValues = new Dictionary<int, int>();
             var currentIndex = 0;

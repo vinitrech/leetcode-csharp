@@ -29,7 +29,7 @@
         /// </summary>
         /// <param name="number">Integer to check</param>
         /// <returns>True if number is a palindrome</returns>
-        public static bool PalindromeNumberSolution(int number)
+        public static bool SolvePalindromeNumber(int number)
         {
             var x = number;
             var y = 0;
