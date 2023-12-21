@@ -31,6 +31,7 @@ namespace LeetCodeCSharp.Medium
         /// </summary>
         /// <param name="l1"></param>
         /// <param name="l2"></param>
+        /// <param name="carry"></param>
         /// <returns></returns>
         public static ListNode? SolveAddTwoNumbers(ListNode? l1, ListNode? l2, int carry = 0)
         {
