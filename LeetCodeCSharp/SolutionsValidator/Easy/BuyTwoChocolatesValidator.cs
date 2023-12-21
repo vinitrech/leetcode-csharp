@@ -1,5 +1,6 @@
 using FluentAssertions;
 using LeetCodeCSharp.Easy;
+using LeetCodeCSharp.Medium;
 using Xunit;
 
 namespace SolutionsValidator.Easy
@@ -13,7 +14,7 @@ namespace SolutionsValidator.Easy
         public void OnSuccess_Should_Find_Correct_Answer_For_BuyTwoChocolates(int[] prices, int money, int expectedResult)
         {
             //Arrange+Act
-            var result = BuyTwoChocolates.BuyTwoChocolatesSolution(prices, money);
+            var result = BuyTwoChocolates.SolveBuyTwoChocolates(prices, money);
 
             //Assert
             result.Should().Be(expectedResult);

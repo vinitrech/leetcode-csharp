@@ -8,7 +8,8 @@
         /// <summary>
         ///You are given an integer array prices representing the prices of various chocolates in a store.<br/> You are also given a single integer money, which represents your initial amount of money.<br/>
         ///You must buy exactly two chocolates in such a way that you still have some non-negative leftover money. You would like to minimize the sum of the prices of the two chocolates you buy.<br/>
-        ///Return the amount of money you will have leftover after buying the two chocolates.If there is no way for you to buy two chocolates without ending up in debt, return money.Note that the leftover must be non-negative.<br/><br/>
+        ///Return the amount of money you will have leftover after buying the two chocolates.If there is no way for you to buy two chocolates without ending up in debt, return money.<br/>
+        ///Note that the leftover must be non-negative.<br/><br/>
         ///Example 1:<br/>
         ///Input: prices = [1,2,2], money = 3<br/>
         ///Output: 0<br/>
@@ -21,7 +22,7 @@
         /// <param name="prices"></param>
         /// <param name="money"></param>
         /// <returns></returns>
-        public static int BuyTwoChocolatesSolution(int[] prices, int money)
+        public static int SolveBuyTwoChocolates(int[] prices, int money)
         {
             Array.Sort(prices);
             var cheapestItemsBuy = prices[0] + prices[1];

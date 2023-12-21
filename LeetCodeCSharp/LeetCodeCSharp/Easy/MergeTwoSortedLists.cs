@@ -1,20 +1,11 @@
-﻿namespace LeetCodeCSharp.Easy
+﻿using LeetCodeCSharp.DTOs;
+
+namespace LeetCodeCSharp.Easy
 {
     /// <summary>
     /// This is the solution for the MergeTwoSortedLists problem.
     /// </summary>
     /// 
-
-    public class ListNode
-    {
-        public int Val { get; set; }
-        public ListNode? Next { get; set; }
-        public ListNode(int val = 0, ListNode? next = null)
-        {
-            Val = val;
-            Next = next;
-        }
-    }
 
     public static class MergeTwoSortedLists
     {
