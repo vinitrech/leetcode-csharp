@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionsValidator", "SolutionsValidator\SolutionsValidator.csproj", "{8CEE7B02-2B4E-420F-AAAB-9E5E0D5BBBDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionsValidator", "SolutionsValidator\SolutionsValidator.csproj", "{8CEE7B02-2B4E-420F-AAAB-9E5E0D5BBBDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeCSharp", "LeetCodeCSharp\LeetCodeCSharp.csproj", "{28A780A5-ACE9-4E6E-8C8B-2B58EA6146CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeCSharp", "LeetCodeCSharp\LeetCodeCSharp.csproj", "{28A780A5-ACE9-4E6E-8C8B-2B58EA6146CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
