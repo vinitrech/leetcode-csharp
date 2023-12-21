@@ -32,44 +32,14 @@ namespace LeetCodeCSharp.Medium
         /// <param name="l1"></param>
         /// <param name="l2"></param>
         /// <returns></returns>
-        public static ListNode SolveAddTwoNumbers(ListNode l1, ListNode l2)
+        public static ListNode? SolveAddTwoNumbers(ListNode? l1, ListNode? l2, int carry = 0)
         {
-            var l1Sum = RevertAndSumListNode(l1);
-            var l2Sum = RevertAndSumListNode(l2);
+            if (l1 == null && l2 == null && carry == 0) return null;
 
-            return BreakResultToListNode(l1Sum + l2Sum);
-        }
+            var total = (l1 != null ? l1.Val : 0) + (l2 != null ? l2.Val : 0) + carry;
+            carry = total / 10;
 
-        public static int RevertAndSumListNode(ListNode l)
-        {
-            var digits = new List<int>();
-            var revertedString = string.Empty;
-
-            while (true)
-            {
-                digits.Add(l.Val);
-
-                if (l.Next is not null)
-                {
-                    l = l.Next;
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            digits.Reverse();
-            revertedString = string.Join("", digits.Select(d => d.ToString()));
-
-            return Convert.ToInt32(revertedString);
-        }
-
-        public static ListNode BreakResultToListNode(int sum)
-        {
-            var reversedStringSum = sum.ToString().Reverse().ToList();
-
-            //TODO: Finish
+            return new ListNode(total % 10, SolveAddTwoNumbers(l1?.Next, l2?.Next, carry));
         }
     }
 }

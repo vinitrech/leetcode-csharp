@@ -1,6 +1,7 @@
 using FluentAssertions;
 using LeetCodeCSharp.DTOs;
 using LeetCodeCSharp.Medium;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace SolutionsValidator.Medium
@@ -13,9 +14,11 @@ namespace SolutionsValidator.Medium
         {
             //Arrange+Act
             var result = AddTwoNumbers.SolveAddTwoNumbers(l1, l2);
+            var resultJson = JsonConvert.SerializeObject(result);
+            var expectedListNodeJson = JsonConvert.SerializeObject(expectedListNode);
 
             //Assert
-            result.Should().Be(expectedListNode);
+            resultJson.Should().Be(expectedListNodeJson);
         }
 
         public static IEnumerable<object[]?> SetupAddTwoNumbersScenarios()
