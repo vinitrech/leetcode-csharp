@@ -1,6 +1,5 @@
 using FluentAssertions;
 using LeetCodeCSharp.Easy;
-using LeetCodeCSharp.Medium;
 using Xunit;
 
 namespace SolutionsValidator.Easy
