@@ -24,20 +24,35 @@
         /// <returns></returns>
         public static double SolveMedianOfTwoSortedArrays(int[] nums1, int[] nums2)
         {
-            var median = 0.0f;
-            int[] concat = [.. nums1, .. nums2];
-            Array.Sort(concat);
+            var merged = new List<int>();
+            var x = 0;
+            var y = 0;
 
-            if (concat.Length % 2 == 0)
+            while (x < nums1.Length && y < nums2.Length)
             {
-                median = (concat[concat.Length / 2] + concat[(concat.Length / 2) - 1]) / 2.0f;
+                if (nums1[x] < nums2[y])
+                {
+                    merged.Add(nums1[x++]);
+                }
+                else
+                {
+                    merged.Add(nums2[y++]);
+                }
+            }
+
+            if (x < nums1.Length) merged.AddRange(nums1[x..]);
+            if (y < nums2.Length) merged.AddRange(nums2[y..]);
+
+            var middleElement = merged.Count / 2;
+
+            if (merged.Count % 2 == 0)
+            {
+                return (merged[middleElement - 1] + merged[middleElement]) / 2.0;
             }
             else
             {
-                median = concat[concat.Length / 2];
+                return merged[middleElement];
             }
-
-            return median;
         }
     }
 }
