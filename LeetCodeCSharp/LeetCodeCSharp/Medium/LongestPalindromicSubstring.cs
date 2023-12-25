@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeCSharp.Medium
 {
     /// <summary>
-    /// This is the solution for the Longest Palindromic Substring problem.
+    /// This is the solution for the LongestPalindromicSubstring problem.
     /// </summary>
     /// 
     public static class LongestPalindromicSubstring
