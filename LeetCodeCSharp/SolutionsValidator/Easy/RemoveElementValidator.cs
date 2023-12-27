@@ -8,7 +8,7 @@ namespace SolutionsValidator.Easy
     {
         [Theory]
         [InlineData(new int[] { 3, 2, 2, 3 }, 3, 2)]
-        //[InlineData(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2, 5)]
+        [InlineData(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2, 5)]
         public void OnSuccess_Should_Find_Correct_Answer_For_RemoveElement(int[] nums, int val, int expectedResult)
         {
             //Arrange+Act
