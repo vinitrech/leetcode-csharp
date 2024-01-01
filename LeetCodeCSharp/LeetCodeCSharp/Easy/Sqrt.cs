@@ -26,9 +26,9 @@
         /// <returns></returns>
         public static int SolveSqrt(int x)
         {
-            long result = 0;
+            var result = 0L;
 
-            for (long root = 0; root * root <= x; root++)
+            for (var root = 0L; root * root <= x; root++)
             {
                 result = root;
             }
