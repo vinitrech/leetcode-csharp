@@ -30,15 +30,7 @@
         /// <returns></returns>
         public static int SolveClimbingStairs(int n)
         {
-            var (steps, previousSteps, count) = (1, 0, 0);
-
-            while (count < n)
-            {
-                (previousSteps, steps) = (steps, steps + previousSteps);
-                count++;
-            }
-
-            return steps;
+            //TODO: Do it again 
         }
     }
 }
