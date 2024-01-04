@@ -30,7 +30,14 @@
         /// <returns></returns>
         public static int SolveClimbingStairs(int n)
         {
-            //TODO: Do it again 
+            var (current, start) = (1, 1);
+
+            for (var count = 0; count < n; count++)
+            {
+                (start, current) = (current, current + start);
+            }
+
+            return start;
         }
     }
 }
