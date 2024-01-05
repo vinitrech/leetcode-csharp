@@ -43,7 +43,12 @@
         /// <param name="n"></param>
         public static void SolveMergeSortedArray(int[] nums1, int m, int[] nums2, int n)
         {
+            var (leftIndex, rightIndex, mergeIndex) = (m - 1, n - 1, nums1.Length - 1);
 
+            while (rightIndex >= 0)
+            {
+                nums1[mergeIndex--] = (leftIndex < 0 || nums1[leftIndex] < nums2[rightIndex]) ? nums2[rightIndex--] : nums1[leftIndex--];
+            }
         }
     }
 }

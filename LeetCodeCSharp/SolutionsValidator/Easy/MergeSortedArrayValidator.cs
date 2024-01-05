@@ -14,24 +14,39 @@ namespace SolutionsValidator.Easy
             MergeSortedArray.SolveMergeSortedArray(nums1, m, nums2, n);
 
             //Assert
-            nums1.Should().BeEquivalentTo(expectedResult);
+            nums1.Should().ContainInOrder(expectedResult);
         }
 
         public static IEnumerable<object[]> SetupSolveMergeSortedArrayUseCases()
         {
             yield return new object[]
             {
-                new int[] { 1, 2, 3, 0, 0, 0 }, 3, new int[] { 2, 5, 6 }, 3, new int[] { 1, 2, 2, 3, 5, 6 }
+                    new int[] { 1, 2, 3, 0, 0, 0 }, 3, new int[] { 2, 5, 6 }, 3, new int[] { 1, 2, 2, 3, 5, 6 }
             };
 
             yield return new object[]
             {
-                new int[] { 1 }, 1, Array.Empty<int>(), 0, new int[] { 1 }
+                    new int[] { 1 }, 1, Array.Empty<int>(), 0, new int[] { 1 }
             };
 
             yield return new object[]
             {
                 new int[] { 0 }, 0, new int[] { 1 }, 1, new int[] { 1 }
+            };
+
+            yield return new object[]
+            {
+                new int[] { 4,5,6,0,0,0 }, 3, new int[] { 1,2,3 }, 3, new int[] { 1,2,3,4,5,6 }
+            };
+
+            yield return new object[]
+            {
+                new int[] { 4,0,0,0,0,0 }, 1, new int[] { 1,2,3,5,6 }, 5, new int[] { 1,2,3,4,5,6 }
+            };
+
+            yield return new object[]
+            {
+                new int[] { 1,2,4,5,6,0 }, 5, new int[] { 3 }, 1, new int[] { 1,2,3,4,5,6 }
             };
         }
     }
