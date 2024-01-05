@@ -24,9 +24,9 @@ namespace LeetCodeCSharp.Easy
         /// </summary>
         /// <param name="head"></param>
         /// <returns></returns>
-        public static ListNode SolveRemoveDuplicatesFromSortedList(ListNode head)
+        public static ListNode? SolveRemoveDuplicatesFromSortedList(ListNode head)
         {
-
+            //SOLVE again
         }
     }
 }

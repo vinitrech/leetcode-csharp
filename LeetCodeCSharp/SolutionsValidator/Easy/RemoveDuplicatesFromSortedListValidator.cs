@@ -13,7 +13,7 @@ namespace SolutionsValidator.Easy
         {
             //Arrange+Act
             var result = RemoveDuplicatesFromSortedList.SolveRemoveDuplicatesFromSortedList(n);
-
+            
             //Assert
             result.Should().BeEquivalentTo(expectedResult);
         }
