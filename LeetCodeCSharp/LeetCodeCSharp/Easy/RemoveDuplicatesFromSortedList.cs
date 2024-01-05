@@ -26,7 +26,28 @@ namespace LeetCodeCSharp.Easy
         /// <returns></returns>
         public static ListNode? SolveRemoveDuplicatesFromSortedList(ListNode head)
         {
-            //SOLVE again
+            if (head?.Next is null)
+            {
+                return head;
+            }
+
+            var (current, next) = (head, head.Next);
+
+            while (next is not null)
+            {
+                if (next.Val == current!.Val)
+                {
+                    current.Next = next.Next;
+                    next = current.Next;
+                }
+                else
+                {
+                    current = current.Next;
+                    next = next.Next;
+                }
+            }
+
+            return head;
         }
     }
 }
