@@ -9,7 +9,7 @@ namespace SolutionsValidator.Easy
     {
         [Theory]
         [MemberData(nameof(SetupBinaryTreeInorderTraversalUseCases))]
-        public void OnSuccess_Should_Find_Correct_Answer_For_AddBinary(TreeNode root, IList<int> expectedOutput)
+        public void OnSuccess_Should_Find_Correct_Answer_For_BinaryTreeInorderTraversal(TreeNode root, IList<int> expectedOutput)
         {
             //Arrange+Act
             var result = BinaryTreeInorderTraversal.SolveBinaryTreeInorderTraversal(root);
