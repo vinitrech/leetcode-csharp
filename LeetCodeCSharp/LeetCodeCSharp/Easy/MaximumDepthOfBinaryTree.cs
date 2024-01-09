@@ -29,7 +29,7 @@ namespace LeetCodeCSharp.Easy
             var queue = new Queue<TreeNode>();
             var count = 0;
 
-            if (root == null)
+            if (root is null)
             {
                 return 0;
             }
